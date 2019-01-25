@@ -1,2 +1,2 @@
-﻿<br/>
+<br/>
 enregistrement effectue

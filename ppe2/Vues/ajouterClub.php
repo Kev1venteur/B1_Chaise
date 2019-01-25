@@ -1,4 +1,4 @@
-﻿<div class="centrePage">
+<!-- <div class="centrePage">
 <br><br><rb>
 <form action = 'index.php?vue=club&action=enregistrer' method = 'post'>
 	<table>
@@ -22,4 +22,4 @@
 		<tr>
 	</table>
 </form>
-</div>
+</div> -->

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 class accesBD
 	{
@@ -18,8 +18,8 @@ class accesBD
 		{
 		$this->hote="localhost";
 		$this->login="root";
-		$this->passwd="epsi2018";
-		$this->base="aussonne";
+		$this->passwd="";
+		$this->base="ppe2Mairie";
 		$this->connexion();
 		
 		}
