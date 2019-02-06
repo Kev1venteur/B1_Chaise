@@ -36,7 +36,7 @@ Class conteneurClub
 						<td>Nom</td>
 						<td>Adresse</td>
 						<td>Email</td>
-						<td>RésmuméActivité</td>
+						<td>Résmumé Activité</td>
 					</tr>
 				</thead>
 			<tbody>';
@@ -46,7 +46,6 @@ Class conteneurClub
 		}
 		$liste = $liste.'</tbody></table></div>';
 		return $liste;}
-
 		//METHODE RETOURNANT LA LISTE DES CLUBS DANS UNE BALISE <SELECT>------------------------------------------------------------------
 	public function lesClubsAuFormatHTML()
 		{

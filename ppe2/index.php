@@ -33,3 +33,8 @@ else
 }
 
 ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$('#tabClub').DataTable();
+} );
+</script>
