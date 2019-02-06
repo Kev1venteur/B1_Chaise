@@ -2,13 +2,13 @@
 Class club
 	{
 	//ATTRIBUTS PRIVES-------------------------------------------------------------------------
-	private $idClub; 
-	private $nomClub; 
-	private $adresseClub; 
-	private $emailClub; 
-	private $dateCreation; 
-	private $resumeActiviteClub; 
-	
+	private $idClub;
+	private $nomClub;
+	private $adresseClub;
+	private $emailClub;
+	private $dateCreation;
+	private $resumeActiviteClub;
+
 	//CONSTRUCTEUR-----------------------------------------------------------------------------
 	public function __construct($unIdClub, $unNomClub, $uneAdresseClub, $unEmailClub, $uneDateCreation, $unResumeClub)
 		{
@@ -19,13 +19,13 @@ Class club
 		$this->dateCreation = $uneDateCreation;
 		$this->resumeActiviteClub = $unResumeClub;
 		}
-	
+
 	//ACCESSEURS-------------------------------------------------------------------------------
 	public function getIdClub()
 		{
 		return $this->idClub;
 		}
-		
+
 	public function getNomClub()
 		{
 		return $this->nomClub;
@@ -47,7 +47,7 @@ Class club
 		return $this->resumeActiviteClub;
 		}
 	//SETTEUR------------------------------------------------------------
-	
+
 	public function setIdClub($unIdClub)
 		{
 		$this->idClub = $unIdClub;
@@ -73,5 +73,5 @@ Class club
 		$this->ResumeClub = $unResumeActiviteClub;
 		}
 	}
-	
+
 ?>

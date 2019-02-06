@@ -1,7 +1,7 @@
 <?php
 session_start();
 //include du fichier CONTROLEUR
-$path=$_SERVER['DOCUMENT_ROOT'].'\ppe2';
+$path=$_SERVER['DOCUMENT_ROOT'].'/Chaise-master/ppe2';
 include 'Controleur.php';
 //SI le controleur n'existe pas d�j�, on l'instancie
 if (!isset ($_SESSION['Controleur']))
@@ -26,7 +26,6 @@ $monControleur->affichePiedPage();
 if ((isset($_GET['vue']))&& (isset($_GET['action'])))
 {
 	echo "<script>$('#main-menu').removeClass('d-block').addClass('d-none');</script>";
-	$monControleur->affichePage($_GET['action'],$_GET['vue']);
 }
 else
 {

@@ -100,6 +100,7 @@ class Controleur
 					}
 				else
 					{
+
 					$_SESSION['lesClubs'] = $this->maMairie->listeLesClubs();
 					require 'Vues/voirClub.php';
 					}

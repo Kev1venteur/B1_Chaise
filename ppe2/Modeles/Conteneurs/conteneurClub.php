@@ -44,10 +44,7 @@ Class conteneurClub
 		{
 			$liste = $liste.'<tr><td>'.$unClub->getNomClub().'</td><td>'.$unClub->getAdresseClub().'</td><td>'.$unClub->getEmailClub().'</td><td>'.$unClub->getResumeActiviteClub().'</td></tr>';
 		}
-		$liste = $liste.'
-				</tbody>
-			</table>
-		</div>';
+		$liste = $liste.'</tbody></table></div>';
 		return $liste;}
 
 		//METHODE RETOURNANT LA LISTE DES CLUBS DANS UNE BALISE <SELECT>------------------------------------------------------------------

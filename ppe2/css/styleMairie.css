@@ -20,7 +20,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 160vh;
   /* overflow: hidden; */
   overflow-x: hidden;
 }
@@ -67,6 +67,10 @@ nav {
   }
   .mr-auto {
     height: 35vh;
+  }
+  .img-login {
+    height: 4vh;
+    width: 8vw;
   }
 }
 
