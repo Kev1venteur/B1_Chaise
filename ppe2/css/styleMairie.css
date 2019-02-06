@@ -21,7 +21,8 @@ body {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 header {
   height: 35vh;
@@ -42,8 +43,14 @@ nav {
 }
 
 .main-menu {
-  width: 60vw;
-  height: 60vh;
+  width: 51vw;
+  height: 42vh;
+}
+
+.img-login {
+  margin-left: 2vw;
+  height: 4vh;
+  width: 2vw;
 }
 
 /* Small devices (landscape phones, 576px and up) */

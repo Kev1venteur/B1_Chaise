@@ -53,6 +53,17 @@
 					<a class="dropdown-item" href="#">Voir les équipes de l'entraineur</a>
 				</div>
 			</li>
+      <?php
+      if(!(isset($_SESSION['id']) && isset($_SESSION['type'])))
+      {
+        echo '<img id="img-login" class="img-login" src="img/login.png"data-toggle="modal" data-target="#myModal" />';
+      }
+      else
+      {
+       echo '<img id="img-login" class="img-login" src="img/login.png" data-toggle="modal" data-target="#myModal"/>';
+     }
+     ?>
+      <!-- <img class="img-login" src="img/login.png" alt="Login" data-toggle="modal" data-target="#myModal"> -->
     </ul>
   </div>
 	<p class="big-title">Le sport c'est bien !</p>
@@ -73,7 +84,7 @@
 
 		</ul>
 		</li> !-->
-		<div class="main-menu">
+		<div class="main-menu" id="main-menu">
 			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -82,7 +93,6 @@
 					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
@@ -114,6 +124,7 @@
 				</a>
 			</div>
 		</div>
+
 		<!-- <div class="main-menu">
 			<div id="quotes">
 				<div class="quotes-box">
