@@ -56,11 +56,11 @@
       <?php
       if(!(isset($_SESSION['id']) && isset($_SESSION['type'])))
       {
-        echo '<img id="img-login" class="img-login" src="img/login.png"data-toggle="modal" data-target="#myModal" />';
+        echo '<img id="imgLogin" class="img-login" src="img/login.png" data-toggle="modal" data-target="#myModal" />';
       }
       else
       {
-       echo '<img id="img-login" class="img-login" src="img/login.png" data-toggle="modal" data-target="#myModal"/>';
+       echo '<img id="imgLogout" class="img-login" src="img/logout.png" data-toggle="modal" data-target="#ModalRetour"/>';
      }
      ?>
       <!-- <img class="img-login" src="img/login.png" alt="Login" data-toggle="modal" data-target="#myModal"> -->

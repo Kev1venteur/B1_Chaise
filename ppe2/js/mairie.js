@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $(".table-responsive").dataTable();
   $("#imgLogin").click(function() {
     $("#myModal").modal();
   });
@@ -7,9 +8,7 @@ $(document).ready(function() {
   });
   $("#login").submit(function(e) {
     e.preventDefault();
-    $(document).ready(function() {
-      $(".table-responsive").dataTable();
-    });
+
     hd();
     var $url = "ajax/valide_connect.php";
     $categ = "2";
@@ -20,7 +19,7 @@ $(document).ready(function() {
       id: $("#id")
         .val()
         .toUpperCase(),
-      mp: $("#mp").val(),
+      mp: $("#mdp").val(),
       categ: $categ
     };
     var filterDataRequest = $.ajax({

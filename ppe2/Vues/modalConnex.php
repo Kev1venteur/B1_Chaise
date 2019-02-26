@@ -1,4 +1,3 @@
-
 	<div class="modal fade" id="myModal" role="dialog" style="color:#000;">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -16,12 +15,13 @@
 						</div>
 						<div class="form-group">
 							<label for="mp"><span class="fas fa-eye"></span> Mot de passe</label>
-							<input type="password" class="form-control" id="mp" name="mp" placeholder="Mot de passe" required>
+							<input type="password" class="form-control" id="mdp" placeholder="Mot de passe" data-toggle="modal" data-target="#motsDePasse" required>
 						</div>
 						<div class="form-group">
 							<label class="radio-inline"><input type="radio" name="rblogin" id="rbs" value="rbs" required>Secretaire</label>
 							<label class="radio-inline"><input type="radio" name="rblogin" id="rba" value="rba" required>Administrateur</label>
 						</div>
+						<a data-toggle="modal" href="#mdp" title="mdp">Mot de passe oublié ?</a>
 						<button type="submit" class="btn btn-success btn-block" class="submit"><span class="fas fa-power-off"></span> Login</button>
 					</form>
 				</div>
