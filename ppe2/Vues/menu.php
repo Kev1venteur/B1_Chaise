@@ -60,7 +60,7 @@
       }
       else
       {
-       echo '<img id="imgLogout" class="img-login" src="img/logout.png" data-toggle="modal" data-target="#ModalRetour"/>';
+       echo '<img id="imgLogout" class="img-login" src="img/logout.png" />';
      }
      ?>
       <!-- <img class="img-login" src="img/login.png" alt="Login" data-toggle="modal" data-target="#myModal"> -->
