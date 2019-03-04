@@ -29,7 +29,7 @@ if ($result)
 		try {
 			$mail->CharSet = 'UTF-8';
 			//Server settings
-			$mail->SMTPDebug = 2;                                 // Enable verbose debug output
+			$mail->SMTPDebug = 0;                                 // Enable verbose debug output
 			$mail->isSMTP();                                      // Set mailer to use SMTP
 			$mail->Host = '127.0.0.1';  // Specify main and backup SMTP servers
 			// $mail->Host = 'smtp.gmail.com';
