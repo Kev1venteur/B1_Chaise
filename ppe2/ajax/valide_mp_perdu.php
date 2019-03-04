@@ -31,13 +31,13 @@ if ($result)
 			//Server settings
 			$mail->SMTPDebug = 2;                                 // Enable verbose debug output
 			$mail->isSMTP();                                      // Set mailer to use SMTP
-			$mail->Host = '127.0.1.1';  // Specify main and backup SMTP servers
+			$mail->Host = '127.0.0.1';  // Specify main and backup SMTP servers
 			// $mail->Host = 'smtp.gmail.com';
 			$mail->SMTPAuth = false;                               // Enable SMTP authentication
 			$mail->Username = 'useriw';                 // SMTP username
 			$mail->Password = 'useriw';                           // SMTP password
 			$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-			$mail->Port = 587;                                    // TCP port to connect to
+			$mail->Port = 25;                                    // TCP port to connect to
 
 			//Recipients
 			$mail->setFrom('useriw@ausonne.mairie');
