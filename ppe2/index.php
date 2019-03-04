@@ -26,11 +26,19 @@ $monControleur->affichePiedPage();
 if ((isset($_GET['vue']))&& (isset($_GET['action'])))
 {
 	echo "<script>$('#main-menu').removeClass('d-block').addClass('d-none');</script>";
+	if(!isset($_GET['token']))
+	{
+	$monControleur->affichePage($_GET['action'],$_GET['vue']);
+	}
+	else {
+		echo "<script>$('#main-menu').removeClass('d-none').addClass('d-block');</script>";
+		$monControleur->affichePage1($_GET['action'],$_GET['vue'],$_GET['token']);
+	}
 }
-else
-{
+else {
 	echo "<script>$('#main-menu').removeClass('d-none').addClass('d-block');</script>";
 }
+
 
 ?>
 <script type="text/javascript">
