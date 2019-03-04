@@ -33,7 +33,7 @@ if ($result)
 			$mail->isSMTP();                                      // Set mailer to use SMTP
 			$mail->Host = '127.0.1.1';  // Specify main and backup SMTP servers
 			// $mail->Host = 'smtp.gmail.com';
-			$mail->SMTPAuth = true;                               // Enable SMTP authentication
+			$mail->SMTPAuth = false;                               // Enable SMTP authentication
 			$mail->Username = 'useriw';                 // SMTP username
 			$mail->Password = 'useriw';                           // SMTP password
 			$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
