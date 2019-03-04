@@ -36,7 +36,7 @@ if ($result)
 			$mail->SMTPAuth = false;                               // Enable SMTP authentication
 			$mail->Username = 'useriw';                 // SMTP username
 			$mail->Password = 'useriw';                           // SMTP password
-			$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+			// $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 			$mail->Port = 25;                                    // TCP port to connect to
 
 			//Recipients
