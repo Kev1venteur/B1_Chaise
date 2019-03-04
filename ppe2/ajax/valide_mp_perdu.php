@@ -40,8 +40,8 @@ if ($result)
 			$mail->Port = 25;                                    // TCP port to connect to
 
 			//Recipients
-			$mail->setFrom('useriw');
-			$mail->addAddress($tab['id'], 'AUSSONNE-ID');     // Add a recipient
+			$mail->setFrom('useriw@ausonne.mairie');
+			$mail->addAddress('useriw@ausonne.mairie', 'AUSSONNE-ID');     // Add a recipient
 			// $mail->addAddress('pfromeuf@gmail.com', 'AUSSONNE-ID');     // Add a recipient
 			//$mail->addReplyTo($_POST['mail']);
 			//$mail->addCC($_POST['mail']);
