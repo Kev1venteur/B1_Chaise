@@ -77,7 +77,7 @@ $(document).ready(function() {
       id: $("#id")
         .val()
         .toUpperCase(),
-      mp: $("#mp").val(),
+      mp: $("#mdp").val(),
       categ: $categ
     };
     var filterDataRequest = $.ajax({

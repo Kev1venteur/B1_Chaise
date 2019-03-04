@@ -14,43 +14,60 @@
 			<li class="nav-item dropdown">
 		    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clubs</a>
 		    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-		      <a class="dropdown-item" href = 'index.php?vue=club&action=ajouter'>Ajouter un Club</a>
+		      <a class="dropdown-item administrateur d-none" href = 'index.php?vue=club&action=ajouter'>Ajouter un Club</a>
 		      <a class="dropdown-item" href = 'index.php?vue=club&action=visualiser'>Voir les Clubs</a>
-		      <a class="dropdown-item" href="#">Modifier un Club</a>
+		      <a class="dropdown-item secretaire d-none" href="#">Modifier un Club</a>
 		    </div>
 		  </li>
 			<li class="nav-item dropdown">
 		    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ressources</a>
 		    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-		      <a class="dropdown-item" href = 'index.php?vue=ressource&action=ajouter'>Ajouter une Ressource</a>
+		      <a class="dropdown-item administrateur d-none" href = 'index.php?vue=ressource&action=ajouter'>Ajouter une Ressource</a>
 		      <a class="dropdown-item" href = 'index.php?vue=ressource&action=visualiser'>Voir les Ressources</a>
-		      <a class="dropdown-item" href="#">Modifier une ressource</a>
+		      <a class="dropdown-item secretaire d-none" href="#">Modifier une ressource</a>
 		    </div>
 		  </li>
 			<li class="nav-item dropdown">
 		    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Equipes</a>
 		    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-					<a class="dropdown-item" href="#">Ajouter une équipe</a>
+					<a class="dropdown-item administrateur d-none" href="#">Ajouter une équipe</a>
 					<a class="dropdown-item" href="#">Voir les équipes</a>
-		      <a class="dropdown-item" href="#">Modifier une équipe</a>
+		      <a class="dropdown-item secretaire d-none" href="#">Modifier une équipe</a>
 		    </div>
 		  </li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Jour Semaine</a>
 				<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-					<a class="dropdown-item" href="#">Ajouter un Jour</a>
+					<a class="dropdown-item administrateur d-none" href="#">Ajouter un Jour</a>
 					<a class="dropdown-item" href="#">Voir les jours</a>
-					<a class="dropdown-item" href="#">Modifier un jours</a>
+					<a class="dropdown-item secretaire d-none" href="#">Modifier un jours</a>
 					<a class="dropdown-item" href="#">Voir les équipes de la journée</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Entraineurs</a>
 				<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-					<a class="dropdown-item" href="#">Ajouter un entraineur</a>
+					<a class="dropdown-item administrateur d-none" href="#">Ajouter un entraineur</a>
 					<a class="dropdown-item" href="#">Voir les entraineurs</a>
-					<a class="dropdown-item" href="#">Modifier un entraineur</a>
+					<a class="dropdown-item secretaire d-none" href="#">Modifier un entraineur</a>
 					<a class="dropdown-item" href="#">Voir les équipes de l'entraineur</a>
+				</div>
+			</li>
+      <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Adhérents</a>
+				<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+					<a class="dropdown-item administrateur d-none" href="#">Ajouter un adhérent</a>
+					<a class="dropdown-item" href="#">Voir les adhérent</a>
+					<a class="dropdown-item secretaire d-none" href="#">Modifier un adhérent</a>
+					<a class="dropdown-item" href="#">Voir les adhérents d'une équipe</a>
+				</div>
+			</li>
+      <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Planning</a>
+				<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+					<a class="dropdown-item administrateur d-none" href="#">Affecter une équipe</a>
+					<a class="dropdown-item" href="#">Voir le planning complet</a>
+					<a class="dropdown-item secretaire d-none" href="#">Modifier une affectation</a>
 				</div>
 			</li>
       <?php
@@ -68,22 +85,6 @@
   </div>
 	<p class="big-title">Le sport c'est bien !</p>
 </nav>
-		<!--<li><a href="#">ADHERENTS</a>
-		<ul>
-		<li><a href="construction.php"><font color=#908E8E>Ajouter un Adherent</font></a></li>
-		<li><a href="construction.php"><font color=#908E8E>Voir un Adherent</font></a></li>
-		<li><a href="construction.php"><font color=#908E8E>Modifier un Adherent</font></a></li>
-		<li><a href="construction.php"><font color=#908E8E>Voir les Adherents d'une équipe</font></a></li>
-		</ul>
-		</li>
-		<li><a href="#">PLANNING</a>
-		<ul>
-		<li><a href="construction.php"><font color=#908E8E>Affecter une équipe</font></a></li>
-		<li><a href="construction.php"><font color=#908E8E>Voir le planning complet</font></a></li>
-		<li><a href="construction.php"><font color=#908E8E>Modifier une affectation</font></a></li>
-
-		</ul>
-		</li> !-->
 		<div class="main-menu" id="main-menu">
 			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
