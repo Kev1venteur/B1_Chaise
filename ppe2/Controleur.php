@@ -29,6 +29,7 @@ class Controleur
 		require 'Vues/entete.php';
 		require 'Vues/modalConnex.php';
 		require 'Vues/modalRetour.php';
+		require 'Vues/modalMpPerdu.php';
 		}
 
 
@@ -100,7 +101,6 @@ class Controleur
 					}
 				else
 					{
-
 					$_SESSION['lesClubs'] = $this->maMairie->listeLesClubs();
 					require 'Vues/voirClub.php';
 					}

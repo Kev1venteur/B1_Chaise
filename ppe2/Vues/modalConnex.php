@@ -21,12 +21,13 @@
 							<label class="radio-inline"><input type="radio" name="rblogin" id="rbs" value="rbs" required>Secretaire</label>
 							<label class="radio-inline"><input type="radio" name="rblogin" id="rba" value="rba" required>Administrateur</label>
 						</div>
-						<a data-toggle="modal" href="#mdp" title="mdp">Mot de passe oublié ?</a>
+						<!-- <p id="#mdp" title="mots de passe" data-toggle="modal" data-target="#myModalMpPerdu">Mot de passe oublié ?</p> -->
+						<button type="button" id="mdpperdu" class="btn btn-secondary" data-toggle="modal" data-target="#myModalMpPerdu">Mot de passe oublié ?</button>
 						<button type="submit" class="btn btn-success btn-block" class="submit"><span class="fas fa-power-off"></span> Login</button>
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button"  class="btn btn-danger btn-default pull-left" data-dismiss="modal" ><span class="fas fa-times"></span> Cancel</button>
+					<button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal" ><span class="fas fa-times"></span> Cancel</button>
 				</div>
 			</div>
 		</div>
