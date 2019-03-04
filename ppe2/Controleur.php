@@ -30,6 +30,7 @@ class Controleur
 		require 'Vues/modalConnex.php';
 		require 'Vues/modalRetour.php';
 		require 'Vues/modalMpPerdu.php';
+		require 'Vues/modalRenouvellementMp.php';
 		}
 
 
