@@ -41,7 +41,7 @@ if ($result)
 
 			//Recipients
 			$mail->setFrom('useriw@ausonne.mairie');
-			$mail->addAddress('augustin.ribreau@gmail.com', 'AUSSONNE-ID');     // Add a recipient
+			$mail->addAddress($tab['id'], 'AUSSONNE-ID'); 		// Add a recipient
 			// $mail->addAddress('pfromeuf@gmail.com', 'AUSSONNE-ID');     // Add a recipient
 			//$mail->addReplyTo($_POST['mail']);
 			//$mail->addCC($_POST['mail']);
