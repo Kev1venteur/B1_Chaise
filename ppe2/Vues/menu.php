@@ -70,19 +70,19 @@
 					<a class="dropdown-item secretaire d-none" href="#">Modifier une affectation</a>
 				</div>
 			</li>
-      <?php
-      if(!(isset($_SESSION['id']) && isset($_SESSION['type'])))
-      {
-        echo '<img id="imgLogin" class="img-login" src="img/login.png" data-toggle="modal" data-target="#myModal" />';
-      }
-      else
-      {
-       echo '<img id="imgLogout" class="img-login" src="img/logout.png" />';
-     }
-     ?>
       <!-- <img class="img-login" src="img/login.png" alt="Login" data-toggle="modal" data-target="#myModal"> -->
     </ul>
   </div>
+  <?php
+  if(!(isset($_SESSION['id']) && isset($_SESSION['type'])))
+  {
+    echo '<img id="imgLogin" class="img-login" src="img/login.png" data-toggle="modal" data-target="#myModal" />';
+  }
+  else
+  {
+    echo '<img id="imgLogout" class="img-login" src="img/logout.png" />';
+  }
+  ?>
 	<p class="big-title">Le sport c'est bien !</p>
 </nav>
 		<div class="main-menu" id="main-menu">

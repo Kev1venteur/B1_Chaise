@@ -38,7 +38,6 @@ else {
 if(isset($_SESSION['type'])) {
 	if($_SESSION['type'] == 1){
 		echo "<script>$('.secretaire').removeClass('d-none').addClass('d-block');</script>";
-		echo "<script>$('.administrateur').removeClass('d-block').addClass('d-none');</script>";
 	}
 	if($_SESSION['type'] == 2){
 		echo "<script>$('.secretaire').removeClass('d-none').addClass('d-block');</script>";

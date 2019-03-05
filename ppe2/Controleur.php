@@ -139,6 +139,7 @@ class Controleur
 
 				if (empty($nomClub)||empty($adresseClub)||empty($emailClub)||empty($dateCreationClub)||empty($resumeActiviteClub))
 					{
+						echo "1";
 					$message = "Veuillez saisir les informations";
 					$lien = 'index.php?vue=club&action=ajouter';
 					$_SESSION['message'] = $message;
@@ -147,6 +148,7 @@ class Controleur
 					}
 				else
 					{
+						echo "2";
 					$this->maMairie->ajouteUnClub($nomClub,$adresseClub,$emailClub,$dateCreationClub,$resumeActiviteClub);
 					require 'Vues/enregistrer.php';
 					// $_SESSION['Controleur'] = serialize($this);
