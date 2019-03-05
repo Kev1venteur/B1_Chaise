@@ -17,10 +17,6 @@ else
 $monControleur->afficheEntete();
 //affichage du menu
 $monControleur->afficheMenu();
-if ((isset($_GET['vue'])) && (isset($_GET['action'])))
-	$monControleur->affichePage($_GET['action'],$_GET['vue']);
-//affichage du pied de page
-$monControleur->affichePiedPage();
 ?>
 <?php
 if ((isset($_GET['vue']))&& (isset($_GET['action'])))
