@@ -17,7 +17,7 @@ Class gestionMairie
 	private $tousLesJoursSemaine;
 	private $tousLesClubs;
 	private $maBD;
-	
+
 	//CONSTRUCTEUR--------------------------------------------------------------------------------------------------------------------------------
 	public function __construct()
 		{
@@ -28,16 +28,20 @@ Class gestionMairie
 		$this->tousLesJoursSemaine = new conteneurJourSemaine();
 		$this->tousLesEntraineurs = new conteneurEntraineur();
 		$this->maBD = new accesBD();
-		$this->chargeLesClubs();	
+		$this->chargeLesClubs();
 		$this->chargeLesEquipes();
 		$this->chargeLesRessources();
 		$this->chargeLesJoursSemaine();
 		$this->chargeLesAdherents();
 		$this->chargeLesEntraineurs();
-	
+
 		}
-	
-		
+		public function gettousLesClubs(){
+			return $this->tousLesClubs;
+		}
+
+
+
 	//METHODE CHARGEANT TOUTES LES CLUBS--------------------------------------------------------------------------------------
 	private function chargeLesClubs()
 		{
@@ -50,7 +54,7 @@ Class gestionMairie
 			$nb++;
 			}
 		}
-	
+
 	//METHODE CHARGEANT TOUS LES ADHERENTS-----------------------------------------------------------------------------------
 	private function chargeLesAdherents()
 		{
@@ -61,7 +65,7 @@ Class gestionMairie
 			$this->tousLesAdherents->ajouteUnAdherent($resultat[$nb][0],$resultat[$nb][1],$resultat[$nb][2],$resultat[$nb][3],$resultat[$nb][4],$resultat[$nb][5]);
 			$nb++;
 			}
-			
+
 		}
 		//METHODE CHARGEANT TOUTES LES RESSOURCES-----------------------------------------------------------------------------------
 	private function chargeLesRessources()
@@ -90,7 +94,7 @@ Class gestionMairie
 		{
 		$resultat=$this->maBD->chargement('entraineur');
 		$nb=0;
-	
+
 		while ($nb<sizeof($resultat))
 			{
 				$this->tousLesEntraineurs->ajouteUnEntraineur($resultat[$nb][0],$resultat[$nb][1],$resultat[$nb][2]);
@@ -102,7 +106,7 @@ Class gestionMairie
 		{
 		$resultat=$this->maBD->chargement('equipe');
 		$nb=0;
-	
+
 		while ($nb<sizeof($resultat))
 			{
 				$this->toutesLesEquipes->ajouteUneEquipe($resultat[$nb][0],$resultat[$nb][1],$resultat[$nb][2],$resultat[$nb][3],$resultat[$nb][4],$resultat[$nb][5],$resultat[$nb][6],$resultat[$nb][7],$resultat[$nb][8],$resultat[$nb][9]);
@@ -138,29 +142,29 @@ Class gestionMairie
 		{
 		//insertion de l'adherent  dans la base de données
 		$sonCode=$this->maBD->insertAdherent($unNomAdherent, $unPrenomAdherent, $unAgeAdherent, $unSexeAdherent, $unIdEquipeAdherent);
-		
+
 		//instanciation de l'adherent et ajout de celle-ci dans la collection
 		$this->tousLesAdherents->ajouteUnAdherent($sonNumero,$unNomAdherent, $unPrenomAdherent, $unAgeAdherent, $unSexeAdherent, $unIdEquipeAdherent);
-		}	
-		
+		}
+
     //METHODE INSERANT UN ENTRAINEUR--------------------------------------------------------------------------------------------------------
 	public function ajouteUnEntraineur($unNomEntraineur, $unPrenomEntraineur)
 		{
 		//insertion de l'adherent  dans la base de données
 		$sonCode=$this->maBD->insertEntraineur($unNomEntraineur, $unPrenomEntraineur);
-		
+
 		//instanciation de l'entraineur et ajout de celle-ci dans la collection
 		$this->tousLesEntraineurs->ajouteUnEntraineur($sonNumero,$unNomEntraineur, $unPrenomEntraineur);
-		}	
+		}
 	//METHODE INSERANT UN CLUB --------------------------------------------------------------------------------------------------------
 	public function ajouteUnClub($unNomClub,$uneAdresseClub, $unEmailClub, $uneDateCreation, $unResumeActiviteClub)
 		{
 		//insertion d'un club  dans la base de données
 		$sonCode=$this->maBD->insertClub($unNomClub,$uneAdresseClub, $unEmailClub, $uneDateCreation, $unResumeActiviteClub);
-		
+
 		//instanciation du club et ajout de celle-ci dans la collection
 		$this->tousLesClubs->ajouteUnClub($sonCode,$unNomClub,$uneAdresseClub, $unEmailClub, $uneDateCreation, $unResumeActiviteClub);
-		}	
+		}
 	//METHODE RETOURNANT LE NOMBRE DE CLUB------------------------------------------------------------------------------------------------
 	public function donneNbClubs()
 		{
@@ -175,7 +179,7 @@ Class gestionMairie
 	public function donneNbEquipes()
 		{
 		return $this->toutesLesEquipes->nbEquipe();
-		}		
+		}
 	public function donneNbEntraineurs()
 		{
 		return $this->tousLesEntraineurs->nbEntraineur();
@@ -183,7 +187,7 @@ Class gestionMairie
 	public function donneNbAdherents()
 		{
 		return $this->tousLesAdherents->nbAdherent();
-		}		
+		}
 	public function donneNbJoursSemaine()
 		{
 		return $this->tousLesJoursSemaine->nbJourSemaine();
@@ -213,8 +217,8 @@ Class gestionMairie
 		{
 		return $this->tousLesAdherents->listeDesAdherents();
 		}
-			
-			
+
+
 	//METHODE RETOURNANT LA LISTE DES DIFFERENTS ELEMENTS DANS DES BALISES <SELECT>-----------------------------------------------------------------
 	public function lesAdherentsAuFormatHTML()
 		{
@@ -223,30 +227,30 @@ Class gestionMairie
 	public function lesRessourcesAuFormatHTML()
 		{
 		return $this->toutesLesRessources->lesRessourcesAuFormatHTML();
-		}	
+		}
 	public function lesEquipesAuFormatHTML()
 		{
 		return $this->toutesLesEquipes->lesEquipesAuFormatHTML();
-		}	
+		}
 	public function lesClubsAuFormatHTML()
 		{
 		return $this->tousLesClubs->lesClubsAuFormatHTML();
-		}	
+		}
 	public function lesJoursSemaineAuFormatHTML()
 		{
 		return $this->tousLesJoursSemaine->lesJoursSemaineAuFormatHTML();
-		}	
+		}
 	public function lesEntraineursAuFormatHTML()
 		{
 		return $this->tousLesEntraineurs->lesEntraineursAuFormatHTML();
-		}			
+		}
 	//METHODE RETOURNANT LES DETAILS D'UN ELEMENT----------------------------------------------------------------------------------------------------
 	/*public function donneDetails($unNumeroGuide)
 		{
 		  $retour=$this->tousLesGuides->donneToutesLeslanguesDUnGuide($unNumeroGuide);
 		  return $retour;
 		}*/
-		
+
 	}
-	
+
 ?>

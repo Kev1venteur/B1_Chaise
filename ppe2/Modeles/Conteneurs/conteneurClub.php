@@ -37,12 +37,14 @@ Class conteneurClub
 						<td>Adresse</td>
 						<td>Email</td>
 						<td>Résmumé Activité</td>
+						<td>Modifier</td>
 					</tr>
 				</thead>
 			<tbody>';
 		foreach ($this->lesClubs as $unClub)
 		{
-			$liste = $liste.'<tr><td>'.$unClub->getNomClub().'</td><td>'.$unClub->getAdresseClub().'</td><td>'.$unClub->getEmailClub().'</td><td>'.$unClub->getResumeActiviteClub().'</td></tr>';
+			$liste = $liste.'<tr><td>'.$unClub->getNomClub().'</td><td>'.$unClub->getAdresseClub().'</td><td>'.$unClub->getEmailClub().'</td><td>'.$unClub->getResumeActiviteClub().'</td><td><a href="http://localhost/chaise-master/ppe2/index.php?vue=club&action=modifier&id='.$unClub->getIdClub().'"><button type="button" class="btn btn-secondary">Modifier</button>
+</a></td></tr>';
 		}
 		$liste = $liste.'</tbody></table></div>';
 		return $liste;}

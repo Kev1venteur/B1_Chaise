@@ -24,6 +24,9 @@ if ((isset($_GET['vue']))&& (isset($_GET['action'])))
 	echo "<script>$('#main-menu').removeClass('d-block').addClass('d-none');</script>";
 	if(!isset($_GET['token']))
 	{
+		if(isset($_GET['id'])){
+			$_SESSION['idClub']=$_GET['id'];
+		}
 	$monControleur->affichePage($_GET['action'],$_GET['vue']);
 	}
 	else {

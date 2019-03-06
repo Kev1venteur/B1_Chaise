@@ -128,6 +128,11 @@ class Controleur
 					require 'Vues/voirClub.php';
 					}
 				break;
+				//CAS modifier d'un Club---------------------------------------------------------------------------------------------------------
+				case "modifier" :
+					$monClub=$this->maMairie->gettousLesClubs()->donneObjetClubDepuisNumero($_SESSION['idClub']);
+					require 'Vues/modifierClub.php';
+					break;
 
 			//CAS enregistrement d'un club dans la base------------------------------------------------------------------------------
 			case "enregistrer" :
@@ -139,7 +144,6 @@ class Controleur
 
 				if (empty($nomClub)||empty($adresseClub)||empty($emailClub)||empty($dateCreationClub)||empty($resumeActiviteClub))
 					{
-						echo "1";
 					$message = "Veuillez saisir les informations";
 					$lien = 'index.php?vue=club&action=ajouter';
 					$_SESSION['message'] = $message;

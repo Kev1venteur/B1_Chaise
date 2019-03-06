@@ -16,7 +16,7 @@
 		    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
 		      <a class="dropdown-item administrateur d-none" href = 'index.php?vue=club&action=ajouter'>Ajouter un Club</a>
 		      <a class="dropdown-item" href = 'index.php?vue=club&action=visualiser'>Voir les Clubs</a>
-		      <a class="dropdown-item secretaire d-none" href="#">Modifier un Club</a>
+		      <a class="dropdown-item secretaire d-none" href="index.php?vue=club&action=visualiser">Modifier un Club</a>
 		    </div>
 		  </li>
 			<li class="nav-item dropdown">
@@ -32,7 +32,7 @@
 		    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
 					<a class="dropdown-item administrateur d-none" href="#">Ajouter une équipe</a>
 					<a class="dropdown-item" href="#">Voir les équipes</a>
-		      <a class="dropdown-item secretaire d-none" href="#">Modifier une équipe</a>
+		      <a class="dropdown-item secretaire d-none" href="">Modifier une équipe</a>
 		    </div>
 		  </li>
 			<li class="nav-item dropdown">
