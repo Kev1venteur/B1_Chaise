@@ -3,12 +3,13 @@ Chaise est un nom aléatoire pour désigner le projet de developpement PPE2. Ce 
 
 ## Prise en main
 ```
+- Installer Wamp
 - Télécharger le fichier .zip ou cloner le projet
 - Aller dans le fichier ppe2
 - Lancer le fichier index.php
 ```
 
-## Built With
+## Utilitaire
 - <a href="http://www.wampserver.com/">Wamp</a> - Permet de faire fonctionner localement des scripts PHP.
 - <a href="https://atom.io/">Atom</a> - Editeur de code.
 
