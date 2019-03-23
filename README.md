@@ -4,6 +4,7 @@ Chaise est un nom aléatoire pour désigner le projet de developpement PPE2. Ce 
 ## Prise en main
 ```
 - Télécharger le fichier .zip ou cloner le projet <br>
+- Aller dans le fichier ppe2<br>
 - Lancer le fichier index.php
 ```
 
